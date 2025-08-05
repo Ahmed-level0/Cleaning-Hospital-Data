@@ -29,8 +29,8 @@ def sat_imputer(row, grouped_data):
 
     doctor_group = grouped_data.get_group(doctor)
 
-    mode_sat_score = doctor_group['patient_sat_score'].value_counts()[0]
-    
+    mode_sat_score = doctor_group['patient_sat_score'].value_counts().index[0]
+
     return float(mode_sat_score)
 
     
